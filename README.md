@@ -1,53 +1,76 @@
+# 🏀 PrizePicks Prediction App
 
-🏀 PrizePicks NBA Stat Prediction App
-📌 Project Goal
-The goal of this project is to create a machine learning-powered web application that helps users make more informed picks on PrizePicks by predicting how likely a player is to go over or under a given stat line (e.g., points, rebounds, assists). The app will combine data science, sports analytics, and full-stack development to deliver a useful and intuitive tool.
+**Predict NBA player performance to make smarter PrizePicks selections.**  
+Combines data science, basketball analytics, and machine learning in a full-stack web app.
 
-🎯 Minimum Viable Product (MVP)
-The MVP will focus on delivering a usable prototype with basic prediction functionality. It includes:
+---
 
-📊 Data & Feature Pipeline
-Pull NBA player and team stats via the nba_api
+## 📌 Project Goal
 
-Store and organize data (initially local, scalable to a database)
+The goal of this project is to build a machine learning-powered web application that helps users make more informed over/under picks on **PrizePicks**. The app predicts player performance based on opponent context and historical statistics, starting with points and expanding to other categories.
 
-Perform EDA to validate important features based on domain knowledge and research
+---
 
-Select ~10–16 predictive features related to scoring or other stats
+## 🚀 MVP Goals
 
-🧠 Machine Learning
-Train a simple classification or regression model:
+The Minimum Viable Product (MVP) will include:
 
-Regression for predicting player stat output (e.g., 24.5 points)
+### ✅ Data & EDA
+- Pull NBA data using `nba_api`
+- Clean and structure player/team game data
+- Perform EDA to validate basketball domain knowledge
+- Identify key features influencing player performance
 
-Classification for over/under line predictions
+### ✅ Machine Learning
+- Select 10–16 relevant features based on research + EDA
+- Train baseline regression or classification model
+- Evaluate prediction accuracy (e.g., RMSE, accuracy)
+- Save and version models
 
-Base model could be Linear Regression, Random Forest, or XGBoost
+### ✅ Backend
+- Build a **FastAPI** or **Flask** backend with:
+  - `/predict` endpoint to return predictions
+  - Support for player + opponent inputs
 
-Save trained model with evaluation metrics
+### ✅ Frontend
+- Build a **React/Next.js** interface:
+  - Input: Choose a player and stat line
+  - Output: Probability of hitting over/under
+  - Optional: Show supporting stats and trends
 
-🖥️ Backend
-Build a FastAPI or Flask API to:
+---
 
-Accept player + opponent info
+## 🛠️ Tech Stack
 
-Return a predicted stat line or over/under probability
+| Layer     | Tool/Libs                      |
+|-----------|-------------------------------|
+| Data      | `nba_api`, `pandas`, `numpy`  |
+| ML        | `scikit-learn`, `xgboost`     |
+| Backend   | `FastAPI` / `Flask`           |
+| Frontend  | `React.js` / `Next.js`        |
+| DB (optional) | `SQLite` / `PostgreSQL`   |
 
-Manage endpoints like /predict, /players, etc.
+---
 
-🌐 Frontend
-Simple UI in React or Next.js that:
+## 📈 Progress Roadmap
 
-Lets users input/select a player and stat line
+- [x] Set up project and GitHub
+- [ ] Complete EDA & feature selection
+- [ ] Train and evaluate first ML model
+- [ ] Build backend API
+- [ ] Build frontend interface
+- [ ] Deploy MVP
 
-Shows the model’s predicted outcome (e.g., "65% chance OVER 24.5 points")
+---
 
-Optionally, display supporting stats (e.g., last 5 games, opponent defense rank)
+## 📚 References
 
-📚 Documentation & Structure
-Document assumptions and feature logic
+- NBA analytics research papers
+- PrizePicks user trends
+- Sports data modeling studies
 
-Clear file structure for data, models, backend, and frontend
+---
 
-GitHub-ready with updated README and setup instructions
+## 🤝
+
 
