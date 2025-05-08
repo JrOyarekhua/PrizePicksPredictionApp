@@ -1,62 +1,53 @@
-🏀 PrizePicks NBA Player Stat Prediction App
-📌 Project Overview
-The goal of this project is to build a machine learning-powered web application that predicts how many points an NBA player will score in a given matchup. The app combines basketball domain knowledge, exploratory data analysis (EDA), and machine learning to create a predictive tool for use cases like PrizePicks.
 
-This project showcases:
+🏀 PrizePicks NBA Stat Prediction App
+📌 Project Goal
+The goal of this project is to create a machine learning-powered web application that helps users make more informed picks on PrizePicks by predicting how likely a player is to go over or under a given stat line (e.g., points, rebounds, assists). The app will combine data science, sports analytics, and full-stack development to deliver a useful and intuitive tool.
 
-End-to-end machine learning deployment
+🎯 Minimum Viable Product (MVP)
+The MVP will focus on delivering a usable prototype with basic prediction functionality. It includes:
 
-Real-time data ingestion and updates from the nba_api
+📊 Data & Feature Pipeline
+Pull NBA player and team stats via the nba_api
 
-Informed feature selection using research and statistical analysis
+Store and organize data (initially local, scalable to a database)
 
-Backend API for ML inference
+Perform EDA to validate important features based on domain knowledge and research
 
-Frontend interface for user interaction
+Select ~10–16 predictive features related to scoring or other stats
 
-🎯 Minimum Viable Product (MVP) Goals
-Data Pipeline
+🧠 Machine Learning
+Train a simple classification or regression model:
 
-Ingest player and team stats from the nba_api
+Regression for predicting player stat output (e.g., 24.5 points)
 
-Clean, organize, and store data in a database (or cache locally for testing)
+Classification for over/under line predictions
 
-Include scripts to initialize and update the dataset
+Base model could be Linear Regression, Random Forest, or XGBoost
 
-Exploratory Data Analysis (EDA)
+Save trained model with evaluation metrics
 
-Perform visual and statistical analysis to identify key features
+🖥️ Backend
+Build a FastAPI or Flask API to:
 
-Cross-reference insights with basketball domain knowledge and 2–3 research papers
+Accept player + opponent info
 
-Use techniques like χ² tests, correlation heatmaps, and seasonal trends
+Return a predicted stat line or over/under probability
 
-Feature Selection
+Manage endpoints like /predict, /players, etc.
 
-Determine a minimal, high-impact set of features that affect scoring
+🌐 Frontend
+Simple UI in React or Next.js that:
 
-Justify feature choices using both data and research
+Lets users input/select a player and stat line
 
-Machine Learning Model
+Shows the model’s predicted outcome (e.g., "65% chance OVER 24.5 points")
 
-Build a simple baseline model (e.g., Linear Regression or Tree-based)
+Optionally, display supporting stats (e.g., last 5 games, opponent defense rank)
 
-Evaluate and document performance (RMSE, MAE, etc.)
+📚 Documentation & Structure
+Document assumptions and feature logic
 
-Save model for deployment
+Clear file structure for data, models, backend, and frontend
 
-Backend API
+GitHub-ready with updated README and setup instructions
 
-Build a Python/Flask or FastAPI backend
-
-Expose ML model via an API endpoint (/predict) that accepts player/matchup data
-
-Handle input validation and serve predictions in JSON format
-
-Frontend Interface
-
-Create a lightweight React or Next.js frontend
-
-Allow users to select a player and see predicted points for upcoming games
-
-Display basic stats and charts to explain the prediction
